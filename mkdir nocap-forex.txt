@@ -1,0 +1,4 @@
+mkdir nocap-forex
+cd nocap-forex
+npm init -y
+npm install express mongoose bcryptjs express-session connect-mongo

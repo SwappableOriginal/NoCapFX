@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Psychology - NoCap Forex</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay {
+            display: none;
+        }
+
+        header {
+            background-color: #000;
+            padding: 20px;
+        }
+
+        header .logo img {
+            height: 60px;
+        }
+
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .forex-psychology {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .forex-psychology h2 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .forex-psychology p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .get-started-button {
+            display: inline-block;
+            background-color: #1d6bb5;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-started-button:hover {
+            background-color: #165a96;
+        }
+
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .tradingview-widget-container {
+            margin: 20px 0; /* Margin for the widget */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/104caa6c-1433-40b8-9998-7c356fefd883/Leonardo_Phoenix_A_futuristic_highcontrast_visual_features_the_1.jpg" alt="NoCap Forex Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="profile.html"><button class="button">Profile</button></a>
+            <a href="settings.html"><button class="button">Settings</button></a>
+            <a href="logout.html"><button class="button">Logout</button></a>
+            <a href="dashboard.html"><button class="button">Back to Dashboard</button></a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1>Forex Psychology</h1>
+        <div class="container">
+            <div class="forex-psychology">
+                <h2>What is Forex Psychology?</h2>
+                <p>Forex psychology refers to the mental and emotional aspects of trading. It includes managing stress, staying disciplined, and making decisions without fear or greed. Understanding and mastering Forex psychology is essential for long-term success in trading.</p>
+                
+                <a href="https://wa.me/27611794747" class="get-started-button">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TradingView Widget Begin -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+        {
+            "symbols": [
+                {
+                    "proName": "OANDA:XAUUSD",
+                    "title": "Gold"
+                },
+                {
+                    "proName": "FOREXCOM:USDZAR",
+                    "title": "USD/ZAR"
+                },
+                {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "US 100 Cash CFD"
+                },
+                {
+                    "proName": "FOREXCOM:US30",
+                    "title": "US30 Index"
+                },
+                {
+                    "proName": "FX_IDC:GBPUSD",
+                    "title": "GBP/USD"
+                }
+            ],
+            "isTransparent": false,
+            "showSymbolLogo": true,
+            "colorTheme": "dark",
+            "locale": "en"
+        }
+        </script>
+    </div>
+    <!-- TradingView Widget End -->
+
+    <footer>
+        <p>&copy; 2024 NoCap Forex. All rights reserved.</p>
+    </footer>
+</body>
+</html>

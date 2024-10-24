@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - NoCap Forex</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay {
+            display: none;
+        }
+
+        header {
+            background-color: #000;
+            padding: 20px;
+        }
+
+        header .logo img {
+            height: 60px;
+        }
+
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .profile-form h2 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .profile-form label {
+            color: #ccc;
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+
+        .profile-form input,
+        .profile-form select {
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .profile-form input[type="submit"] {
+            background-color: #1d6bb5;
+            cursor: pointer;
+        }
+
+        .profile-form input[type="submit"]:hover {
+            background-color: #165a96;
+        }
+
+        .tradingview-widget-container {
+            margin-top: 20px; /* Space above the widget */
+        }
+
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/104caa6c-1433-40b8-9998-7c356fefd883/Leonardo_Phoenix_A_futuristic_highcontrast_visual_features_the_1.jpg" alt="NoCap Forex Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="profile.html"><button class="button">Profile</button></a>
+            <a href="settings.html"><button class="button">Settings</button></a>
+            <a href="logout.html"><button class="button">Logout</button></a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1>Edit Your Profile</h1>
+        <div class="container">
+            <div class="profile-form">
+                <h2>Update Your Information</h2>
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select your country</option>
+                        <option value="USA">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Canada">Canada</option>
+                        <!-- Add more countries as needed -->
+                    </select>
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+
+                    <label for="ethnicity">Ethnicity:</label>
+                    <select id="ethnicity" name="ethnicity" required>
+                        <option value="">Select your ethnicity</option>
+                        <option value="Asian">Asian</option>
+                        <option value="Black">Black</option>
+                        <option value="Caucasian">Caucasian</option>
+                        <option value="Hispanic">Hispanic</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="kyc">KYC Verification (Upload ID):</label>
+                    <input type="file" id="kyc" name="kyc" required>
+
+                    <input type="submit" value="Update Profile">
+                </form>
+            </div>
+        </div>
+
+        <!-- TradingView Widget Begin -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+            {
+                "symbols": [
+                    {
+                        "proName": "OANDA:XAUUSD",
+                        "title": "Gold"
+                    },
+                    {
+                        "proName": "FOREXCOM:USDZAR",
+                        "title": "USD/ZAR"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100 Cash CFD"
+                    },
+                    {
+                        "proName": "FOREXCOM:US30",
+                        "title": "US30 Index"
+                    },
+                    {
+                        "proName": "FX_IDC:GBPUSD",
+                        "title": "GBP/USD"
+                    }
+                ],
+                "isTransparent": false,
+                "showSymbolLogo": true,
+                "colorTheme": "dark",
+                "locale": "en"
+            }
+            </script>
+        </div>
+        <!-- TradingView Widget End -->
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NoCap Forex. All rights reserved.</p>
+    </footer>
+</body>
+</html>

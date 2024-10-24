@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Forex Market - NoCapFX</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+        }
+
+        header {
+            background-color: #333; /* Dark header */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 100px; /* Logo size */
+        }
+
+        .main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content */
+        }
+
+        .chart-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center charts */
+            max-width: 1200px; /* Max width for content */
+            margin-top: 20px;
+            width: 100%; /* Full width for container */
+        }
+
+        .chart {
+            background-color: white; /* Chart background */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for charts */
+            margin: 10px;
+            width: 100%; /* Full width for charts */
+            height: 500px; /* Set height for the chart */
+        }
+
+        h1 {
+            margin: 10px 0; /* Spacing for headers */
+        }
+
+        /* Button styles */
+        .button {
+            background-color: #28a745; /* Green button */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        /* Dropdown styles */
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/104caa6c-1433-40b8-9998-7c356fefd883/Leonardo_Phoenix_A_futuristic_highcontrast_visual_features_the_1.jpg" alt="NoCap Forex Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="dashboard.html"><button class="button">Dashboard</button></a>
+            <a href="logout.html"><button class="button">Logout</button></a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1>Forex Market Analysis</h1>
+        <p>Select a currency pair to view the chart:</p>
+        
+        <select id="chartSelector" onchange="loadChart()">
+            <option value="">Select a Chart</option>
+            <option value="FX:EURUSD">EUR/USD</option>
+            <option value="FX:GBPUSD">GBP/USD</option>
+            <option value="FX:USDJPY">USD/JPY</option>
+            <option value="FX:AUDUSD">AUD/USD</option>
+            <option value="FX:USDCAD">USD/CAD</option>
+        </select>
+
+        <div class="chart-container">
+            <div class="chart" id="chart"></div>
+        </div>
+    </div>
+
+    <script src="https://s3.tradingview.com/tv.js"></script>
+    <script>
+        function loadChart() {
+            const chartContainer = document.getElementById('chart');
+            const selector = document.getElementById('chartSelector');
+            const selectedValue = selector.value;
+
+            // Clear the chart container
+            chartContainer.innerHTML = '';
+
+            if (selectedValue) {
+                // Create the TradingView widget
+                new TradingView.widget({
+                    "container_id": "chart",
+                    "width": "100%",
+                    "height": "500",
+                    "symbol": selectedValue,
+                    "interval": "D",
+                    "timezone": "Etc/UTC",
+                    "theme": "light",
+                    "style": "1", // 1 for candlestick
+                    "locale": "en",
+                    "toolbar_bg": "#f1f1f1",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "show_popup_button": true,
+                    "popup_height": "600",
+                    "popup_width": "800",
+                    "drawings_access": { 
+                        "type": "black", 
+                        "tools": [
+                            { "name": "Trend Line" }, 
+                            { "name": "Horizontal Line" }, 
+                            { "name": "Vertical Line" }, 
+                            { "name": "Fibonacci Retracement" },
+                            { "name": "Text" },
+                            { "name": "Circle" },
+                            { "name": "Ellipse" },
+                            { "name": "Arrow" },
+                            { "name": "Rectangle" },
+                            { "name": "Measure" }
+                        ]
+                    },
+                    "studies": [
+                        "MACD", 
+                        "RSI", 
+                        "EMA", 
+                        "SMA", 
+                        "Bollinger Bands", 
+                        "Ichimoku"
+                    ],
+                    "fullscreen": false,
+                    "save_image": true
+                });
+            }
+        }
+    </script>
+</body>
+</html>

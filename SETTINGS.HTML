@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - NoCap Forex</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay {
+            display: none;
+        }
+
+        header {
+            background-color: #000;
+            padding: 20px;
+        }
+
+        header .logo img {
+            height: 60px;
+        }
+
+        nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        .main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            color: white;
+        }
+
+        .settings-form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Add space between forms */
+        }
+
+        .settings-form h2 {
+            font-size: 22px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .settings-form p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="password"],
+        .form-group input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #222;
+            color: white;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #1d6bb5;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #165a96;
+        }
+
+        .tradingview-widget-container {
+            margin-top: 20px; /* Space above the widget */
+        }
+
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/104caa6c-1433-40b8-9998-7c356fefd883/Leonardo_Phoenix_A_futuristic_highcontrast_visual_features_the_1.jpg" alt="NoCap Forex Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="profile.html"><button class="button">Profile</button></a>
+            <a href="settings.html"><button class="button">Settings</button></a>
+            <a href="logout.html"><button class="button">Logout</button></a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <h1>Settings</h1>
+        <div class="container">
+            <div class="settings-form">
+                <h2>Update Profile Information</h2>
+                <p>Modify your profile details such as name, email, and phone number.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Update Information">
+                    </div>
+                </form>
+            </div>
+
+            <div class="settings-form">
+                <h2>Change Password</h2>
+                <p>Change your current password to something more secure.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" name="current-password" placeholder="Enter your current password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" name="new-password" placeholder="Enter your new password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your new password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Change Password">
+                    </div>
+                </form>
+            </div>
+
+            <div class="settings-form">
+                <h2>Notification Preferences</h2>
+                <p>Manage your notification preferences for updates and alerts.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="email-notifications">Email Notifications</label>
+                        <input type="checkbox" id="email-notifications" name="email-notifications" checked>
+                        <label for="email-notifications">Receive email notifications</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sms-notifications">SMS Notifications</label>
+                        <input type="checkbox" id="sms-notifications" name="sms-notifications">
+                        <label for="sms-notifications">Receive SMS notifications</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Save Preferences">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- TradingView Widget Begin -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+            {
+                "symbols": [
+                    {
+                        "proName": "OANDA:XAUUSD",
+                        "title": "Gold"
+                    },
+                    {
+                        "proName": "FOREXCOM:USDZAR",
+                        "title": "USD/ZAR"
+                    },
+                    {
+                        "proName": "FOREXCOM:NSXUSD",
+                        "title": "US 100 Cash CFD"
+                    },
+                    {
+                        "proName": "FOREXCOM:US30",
+                        "title": "US30 Index"
+                    },
+                    {
+                        "proName": "FX_IDC:GBPUSD",
+                        "title": "GBP/USD"
+                    }
+                ],
+                "isTransparent": false,
+                "showSymbolLogo": true,
+                "colorTheme": "dark",
+                "locale": "en"
+            }
+            </script>
+        </div>
+        <!-- TradingView Widget End -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NoCap Forex. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>NoCap Forex - Home</title>
+    <style>
+        body {
+            background-color: #1e1e1e; /* Change background for contrast */
+            color: white; /* Text color for visibility */
+            font-family: Arial, sans-serif; /* Font family */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .overlay {
+            display: none; /* Overlay for background opacity */
+        }
+
+        header {
+            background-color: #000; /* Header background color */
+            padding: 20px; /* Header padding */
+        }
+
+        header .logo img {
+            height: 60px; /* Logo height */
+        }
+
+        nav {
+            margin-top: 20px; /* Space above nav */
+            text-align: center; /* Center nav items */
+        }
+
+        nav a {
+            margin: 0 15px; /* Margin between nav items */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .button {
+            padding: 10px 20px; /* Button padding */
+            background-color: #333; /* Button background color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Round corners */
+            cursor: pointer; /* Change cursor to pointer */
+            transition: background-color 0.3s; /* Transition for hover effect */
+        }
+
+        .button:hover {
+            background-color: #555; /* Button hover color */
+        }
+
+        main {
+            text-align: center; /* Center main content */
+            padding: 20px; /* Padding for main content */
+        }
+
+        footer {
+            background-color: #000; /* Footer background color */
+            text-align: center; /* Center footer text */
+            padding: 20px; /* Padding for footer */
+            margin-top: 20px; /* Space above footer */
+        }
+
+        footer h2 {
+            margin: 10px 0; /* Margin for footer heading */
+        }
+
+        footer p {
+            color: #ccc; /* Footer text color */
+        }
+
+        /* Styling for the TradingView widget */
+        .tradingview-widget-container {
+            margin: 20px 0; /* Margin for the widget */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div> <!-- Overlay for background opacity -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://cdn.leonardo.ai/users/aef09c40-dad9-49e4-afcb-6a7a4b6df3df/generations/104caa6c-1433-40b8-9998-7c356fefd883/Leonardo_Phoenix_A_futuristic_highcontrast_visual_features_the_1.jpg" alt="NoCap Forex Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="signin.html"><button class="button">Sign In</button></a>
+            <a href="signup.html"><button class="button">Sign Up</button></a>
+            <a href="contact.html"><button class="button">Contact Us</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to NoCap Forex!</h1>
+        <p>Your trusted partner in trading success.</p>
+    </main>
+
+    <footer class="about-section">
+        <h2>About Us</h2>
+        <p>
+            We pride ourselves in the knowledge we have amassed over the last 10 years and are confident in our skillset to aid any and all traders to gain the necessary tools to become the best version of a great trader they can possibly be.
+        </p>
+        <p>
+            We guarantee that joining our family doesn't just help you get closer to your goals but ensures that you join a group of like-minded individuals to become some of the best traders worldwide.
+        </p>
+        <p>
+            Welcome to the beginning of the rest of your life!
+        </p>
+    </footer>
+
+    <!-- TradingView Widget Begin -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+        {
+            "symbols": [
+                {
+                    "proName": "OANDA:XAUUSD",
+                    "title": "Gold"
+                },
+                {
+                    "proName": "FOREXCOM:USDZAR",
+                    "title": "USD/ZAR"
+                },
+                {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "US 100 Cash CFD"
+                },
+                {
+                    "proName": "FOREXCOM:US30",
+                    "title": "US30 Index"
+                },
+                {
+                    "proName": "FX_IDC:GBPUSD",
+                    "title": "GBP/USD"
+                }
+            ],
+            "isTransparent": false,
+            "showSymbolLogo": true,
+            "colorTheme": "dark",
+            "locale": "en"
+        }
+        </script>
+    </div>
+    <!-- TradingView Widget End -->
+
+    <script src="script.js"></script>
+</body>
+</html>
